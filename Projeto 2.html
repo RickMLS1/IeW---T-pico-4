@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Somando quadrados</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function soma() 
+        {
+            partial_sum = 0;
+
+            document.write("<h2>Soma dos quadrados dos dez primeriros números naturais<h2/>")
+
+            for(i = 0; i < 10; i++)
+            {
+                number = parseInt(prompt("Digite o número"))
+                quadrado = parseInt(Math.pow(number,2))
+                partial_sum += parseInt(quadrado)
+
+                document.write("O numero atual é: "+number+", o quadrado do numero é: "+quadrado+", a soma parcial dos quadrados é de: "+partial_sum+"<br><br>")
+            }  
+        }
+    </script>
+        <form>
+            <input type="button" value="Soma dos quadrados" onclick="soma()">
+        </form>
+</body>
+    <style type="text/css">
+          body 
+          { 
+            background-color: black; 
+            font-family: Arial;
+            font-style: italic;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+          }
+    </style>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Números primos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function N_primos() 
+		{
+			primo = 0
+
+			number = parseInt(prompt("Digite um numero entre 1 e 100"))
+			verifica = parseInt(Math.sqrt(number))
+
+			for(i = 2; i < verifica; i++)
+			{
+				if(number % i == 0)
+				{
+					primo += 1;
+				}
+			}
+			if (primo > 0 || number == 1 || number == 0)
+			{
+				alert("O numero "+number+" não é primo")
+			}
+			else
+			{
+				alert("O numero "+number+" é primo")
+			}
+		}
+	</script>
+		<form>
+			<input type="button" value="Primo ou não" onclick="N_primos()">
+		</form>
+</body>
+	<style type="text/css">
+          body 
+          { 
+            background-color: black; 
+            font-family: Arial;
+            font-style: italic;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+          }
+    </style>
+</html>

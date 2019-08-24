@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular erros</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Erros()
+		{
+			week = parseInt(prompt("Digite a quantidade de semanas:",""))
+			week_projects = parseInt(prompt("Digite a quantidade de projetos por semana:",""))
+			project = week * week_projects;
+
+			i = 0;
+			j = 1;
+			quantity_error = 0;
+
+			for(i = 0; i < project; i++)
+			{
+				quantity_error = Math.pow(2,i)
+				if(i == project -1)
+				{
+					alert("O número de erros no projeto final será de "+quantity_error)
+					document.write("Pojeto final: "+j+"; Erros: "+quantity_error+"<br>")
+				}
+				else
+				{
+					alert("O número de erros no projeto final será de "+j+" de "+quantity_error)
+					document.write("Projeto: "+j+"; Erros: "+quantity_error+"<br>")
+				}
+
+				j++;
+			}
+		}
+	</script>
+		<form>
+			<input type="button" value="Calcular erros Javascript" onclick="Erros()"> 
+		</form>
+</body>
+	<style type="text/css">
+      		body 
+        	{ 
+          		background-color: black; 
+          		font-family: Arial;
+        		font-style: italic;
+      			text-align: center;
+      			font-size: 25px;
+      			color: white;
+        	}
+    </style>
+</html>>

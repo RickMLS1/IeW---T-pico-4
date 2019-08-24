@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recomendação de bolsistas</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Recomendação() 
+        {
+            document.write("<h2>Recomendações dos alunos para bolsas: </h2>")
+
+            for(i = 0; i < 10; i++)
+            {
+                name = prompt("Digite seu nome: ")
+                media = parseFloat(prompt("Digite sua media: "))
+
+                if(media >= 9)
+                {
+                  document.write("Estudante: <b>"+name+"</b>, sua media é: <b>"+media+"</b>, você foi altamente recomendado, parabéns!<br><br>")
+                }
+                else if(media >= 8 && media < 9)
+                {
+                  document.write("Estudante: <b>"+name+"</b>, sua media é: <b>"+media+"</b>, você foi fortemente recomendado, mas ainda pode se esforçar um pouco mais!<br><br>")
+                }
+                else if (media >= 7 && media < 8)
+                {
+                  document.write("Estudante: <b>"+name+"</b>, sua media é: <b>"+media+"</b>, você foi recomendado, mas poderia ser com uma nota melhor.<br><br>")
+                }
+                else
+                {
+                  document.write("Estudante: <b>"+name+"</b>, sua media é: <b>"+media+"</b>, você não foi recomendado, esforce-se mais!<br><br>")
+                }
+            }
+        }
+    </script>
+        <form>
+            <input type="button" value="Bolsas para estudantes" onclick="Recomendação()">
+        </form>
+</body>
+        <style type="text/css">
+          body 
+          { 
+            background-color: black; 
+            font-family: Arial;
+            font-style: italic;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+          }
+    </style>
+</html>
